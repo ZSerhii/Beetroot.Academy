@@ -1,1 +1,1 @@
-# Beetroot.Academy
+# Beetroot Academy - Rivne
