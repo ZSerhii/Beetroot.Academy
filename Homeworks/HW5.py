@@ -7,42 +7,17 @@ print('Result 1:\n')
 
 from random import randint
 
-v1stList = []
-
-v1stList.append(randint(1, 10))
-v1stList.append(randint(1, 10))
-v1stList.append(randint(1, 10))
-v1stList.append(randint(1, 10))
-v1stList.append(randint(1, 10))
-v1stList.append(randint(1, 10))
-v1stList.append(randint(1, 10))
-v1stList.append(randint(1, 10))
-v1stList.append(randint(1, 10))
-v1stList.append(randint(1, 10))
+v1stList = [randint(1, 10) for i in range(10)]
+v2ndList = [randint(1, 10) for i in range(10)]
 
 print('First list: ', v1stList)
-
-v2ndList = []
-
-v2ndList.append(randint(1, 10))
-v2ndList.append(randint(1, 10))
-v2ndList.append(randint(1, 10))
-v2ndList.append(randint(1, 10))
-v2ndList.append(randint(1, 10))
-v2ndList.append(randint(1, 10))
-v2ndList.append(randint(1, 10))
-v2ndList.append(randint(1, 10))
-v2ndList.append(randint(1, 10))
-v2ndList.append(randint(1, 10))
-
 print('Second list:', v2ndList)
 
 vResultList = v1stList + v2ndList
 vResultList = list(set(vResultList))
 
-print('Result list:', vResultList, 'with', len(vResultList), 'elements!')
+print('Result list:', vResultList, 'with', len(vResultList), 'elements!\n')
 
-print('')
 print('Task 2: Extracting numbers.\n')
 print('''Make a list that contains all integers from 1 to 100, then find all
 integers from the list that are divisible by 7 but not a multiple of 5 and
@@ -52,8 +27,8 @@ print('Result 2:')
 
 vBigList = [vInt + 1 for vInt in range(100)]
 
-print('\nList with all integers from 1 to 100:', vBigList)
+print('\nList with all integers from 1 to 100:\n', vBigList, '\n', sep='')
 
 vDiv7NotDiv5List = [vElement for vElement in vBigList if vElement%7 == 0 and vElement%5 != 0]
 
-print('\nIntegers from the list that are divisible by 7 but not a multiple of 5:', vDiv7NotDiv5List)
+print('Integers from the list that are divisible by 7 but not a multiple of 5:\n', vDiv7NotDiv5List, sep='')
