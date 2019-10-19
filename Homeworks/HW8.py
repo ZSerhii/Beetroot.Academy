@@ -26,7 +26,6 @@ def favourite_movie(AMovieName):
 
     print(f'My favourite movie is "{AMovieName}"!\n')
     
-
 print('Result 1:\n')
 
 favourite_movie('Inception')
@@ -45,14 +44,12 @@ def print_country_dict(ACountryDict):
 
     print('Country\'s name and it\'s capital:', ACountryDict)
 
-
 print('Result 2:\n')
 
 print_country_dict(make_country('Ukraine', 'Kyiv'))
 print_country_dict(make_country('Sweden ', 'Stockholm‎'))
 
 print('')
-
 
 print(vTask_3)
 
@@ -87,3 +84,5 @@ print('Result 3:\n')
 print('make_operation("+", 7, 7, 2)        =', make_operation('+', 7, 7, 2))
 print('make_operation("-", 5, 5, -10, -20) =', make_operation('-', 5, 5, -10, -20))
 print('make_operation("*", 7, 6)           =', make_operation('*', 7, 6))
+
+print('\nThat\'s all Folks!')
