@@ -85,4 +85,21 @@ print('make_operation("+", 7, 7, 2)        =', make_operation('+', 7, 7, 2))
 print('make_operation("-", 5, 5, -10, -20) =', make_operation('-', 5, 5, -10, -20))
 print('make_operation("*", 7, 6)           =', make_operation('*', 7, 6))
 
+def FormatList(AList):
+    return ", ".join([str(vItem) for vItem in vList])
+
+print('')
+
+vList = [7, 7, 2]
+
+print(f'make_operation("+", {FormatList(vList)}) =', make_operation('+', *vList))
+
+vList = [5, 5, -10, -20]
+
+print(f'make_operation("-", {FormatList(vList)}) =', make_operation('-', *vList))
+
+vList = [7, 6]
+
+print(f'make_operation("*", {FormatList(vList)}) =', make_operation('*', *vList))
+
 print('\nThat\'s all Folks!')
