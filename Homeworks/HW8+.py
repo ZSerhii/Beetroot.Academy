@@ -25,7 +25,7 @@ vTask_4 =   'Task 4:\n' \
 
 print(vTask_1)
 
-def GetUpperLowerLetters(AString):
+def get_upper_lower_letters(AString):
     LUpperCount = 0
     LLowerCount = 0
 
@@ -42,15 +42,15 @@ def GetUpperLowerLetters(AString):
 
 print('Result 1:\n')
 
-GetUpperLowerLetters('The quick Brow Fox')
+get_upper_lower_letters('The quick Brow Fox')
 
-print('')
+print()
 
 # Task 2 ======================================================================
 
 print(vTask_2)
 
-def GetUniqueItemsList(AList):
+def get_unique_items_list(AList):
     LResult = []
 
     for vItem in AList:
@@ -63,24 +63,24 @@ print('Result 2:\n')
 
 vList = [1, 2, 3, 3, 3, 3, 4, 5]
 
-print(f'Unique items of list {vList}:', GetUniqueItemsList(vList), '\n')
+print(f'Unique items of list {vList}:', get_unique_items_list(vList), '\n')
 
 # Task 3 ======================================================================
 
 print(vTask_3)
 
-def GetEvenNumbersList(AList):
+def get_even_numbers_list(AList):
     return [vItem for vItem in AList if vItem % 2 == 0]
 
 print('Result 3:\n')
 
 vList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-print(f'Even numbers of list {vList}:', GetEvenNumbersList(vList), '\n')
+print(f'Even numbers of list {vList}:', get_even_numbers_list(vList), '\n')
 
 # Task 4 ======================================================================
 
-def is_Pangrams(AString):
+def is_pangrams(AString):
     LAlphabet = 'abcdefghijklmnopqrstuvwxyz'
     LLetters  = set()
 
@@ -96,10 +96,8 @@ print(vTask_4)
 
 print('Result 4:\n')
 
-vString = 'The quick brown fox jumps over the lazy dog'
-
-vResult = is_Pangrams(vString)
-
+vString    = 'The quick brown fox jumps over the lazy dog'
+vResult    = is_pangrams(vString)
 vResultStr = ''
 
 if not vResult:

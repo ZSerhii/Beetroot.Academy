@@ -22,7 +22,7 @@ vTask_3 =   'Task 3. A simple calculator.\n' \
 print(vTask_1)
 
 def favourite_movie(AMovieName):
-    'Takes a string containing the name of your favourite movie'
+    '''Takes a string containing the name of your favourite movie'''
 
     print(f'My favourite movie is "{AMovieName}"!\n')
     
@@ -40,7 +40,7 @@ def make_country(ACountryName, ACountryCapital):
     return {'name': ACountryName, 'capital': ACountryCapital}
 
 def print_country_dict(ACountryDict):
-    'Print make_country\'s function result - dict'
+    '''Print make_country\'s function result - dict'''
 
     print('Country\'s name and it\'s capital:', ACountryDict)
 
@@ -49,7 +49,7 @@ print('Result 2:\n')
 print_country_dict(make_country('Ukraine', 'Kyiv'))
 print_country_dict(make_country('Sweden ', 'Stockholm‎'))
 
-print('')
+print()
 
 print(vTask_3)
 
@@ -85,21 +85,21 @@ print('make_operation("+", 7, 7, 2)        =', make_operation('+', 7, 7, 2))
 print('make_operation("-", 5, 5, -10, -20) =', make_operation('-', 5, 5, -10, -20))
 print('make_operation("*", 7, 6)           =', make_operation('*', 7, 6))
 
-def FormatList(AList):
+def format_list(AList):
     return ", ".join([str(vItem) for vItem in vList])
 
-print('')
+print()
 
 vList = [7, 7, 2]
 
-print(f'make_operation("+", {FormatList(vList)}) =', make_operation('+', *vList))
+print(f'make_operation("+", {format_list(vList)}) =', make_operation('+', *vList))
 
 vList = [5, 5, -10, -20]
 
-print(f'make_operation("-", {FormatList(vList)}) =', make_operation('-', *vList))
+print(f'make_operation("-", {format_list(vList)}) =', make_operation('-', *vList))
 
 vList = [7, 6]
 
-print(f'make_operation("*", {FormatList(vList)}) =', make_operation('*', *vList))
+print(f'make_operation("*", {format_list(vList)}) =', make_operation('*', *vList))
 
 print('\nThat\'s all Folks!')
