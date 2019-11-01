@@ -76,6 +76,8 @@ def make_operation(AOperation, *ANumbers):
             LResult -= i
         elif AOperation == '*':
             LResult *= i
+        elif AOperation == '/':
+            LResult /= i
 
     return LResult
 
@@ -84,6 +86,7 @@ print('Result 3:\n')
 print('make_operation("+", 7, 7, 2)        =', make_operation('+', 7, 7, 2))
 print('make_operation("-", 5, 5, -10, -20) =', make_operation('-', 5, 5, -10, -20))
 print('make_operation("*", 7, 6)           =', make_operation('*', 7, 6))
+print('make_operation("/", 24, 2, 4)       =', make_operation('/', 24, 2, 4))
 
 def format_list(AList):
     return ", ".join([str(vItem) for vItem in vList])
@@ -101,5 +104,9 @@ print(f'make_operation("-", {format_list(vList)}) =', make_operation('-', *vList
 vList = [7, 6]
 
 print(f'make_operation("*", {format_list(vList)}) =', make_operation('*', *vList))
+
+vList = [24, 2, 4]
+
+print(f'make_operation("/", {format_list(vList)}) =', make_operation('/', *vList))
 
 print('\nThat\'s all Folks!')
