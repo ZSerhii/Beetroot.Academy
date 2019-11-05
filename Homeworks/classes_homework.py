@@ -24,6 +24,10 @@ def test_sorted_list(s_list_class):
 
     s_list += [10, -5]
     if s_list != [-5, -1, 1, 2, 3, 4, 5, 6, 10]:
+        errors_list.append('List is not sorted on summation')    
+
+    s_list = s_list + [10, -5]
+    if s_list != [-5, -5, -1, 1, 2, 3, 4, 5, 6, 10, 10]:
         errors_list.append('List is not sorted on summation')
 
     if errors_list:
@@ -38,8 +42,10 @@ class SortedList(list):
         self.sort()
 
     def __add__(self, other):
-        super().__add__(other)
+        self = super().__add__(other)
         self.sort()
+
+        return self
 
     def __iadd__(self, other):
         super().__iadd__(other)
